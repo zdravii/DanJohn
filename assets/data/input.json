@@ -1,0 +1,27 @@
+[
+    {
+        "type" : "text",
+        "name" : "ime",
+        "placeholder" : "Ime"
+    },
+    {
+        "type" : "text",
+        "name" : "prezime",
+        "placeholder" : "Prezime"
+    },
+    {
+        "type" : "email",
+        "name" : "email",
+        "placeholder" : "E-mail"
+    },
+    {
+        "type" : "text",
+        "name" : "adresa",
+        "placeholder" : "Adresa"
+    },
+    {
+        "type" : "text",
+        "name" : "broj",
+        "placeholder" : "Broj telefona (+38161-234-567)"
+    }
+]

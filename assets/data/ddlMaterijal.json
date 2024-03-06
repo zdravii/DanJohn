@@ -1,0 +1,22 @@
+[
+    {
+        "id" : 0,
+        "naziv" : "Materijal"
+    },
+    {
+        "id" : 1,
+        "naziv" : "Tkanina"
+    },
+    {
+        "id" : 2,
+        "naziv" : "Poliester"
+    },
+    {
+        "id" : 3,
+        "naziv" : "Pamuk"
+    },
+    {
+        "id" : 4,
+        "naziv" : "Tekstil"
+    }
+]

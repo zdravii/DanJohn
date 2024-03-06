@@ -1,0 +1,42 @@
+[
+    {
+        "id" : 0,
+        "naziv" : "Boja"
+    },
+    {
+        "id" : 1,
+        "naziv" : "Bež"
+    },
+    {
+        "id" : 2,
+        "naziv" : "Bela"
+    },
+    {
+        "id" : 3,
+        "naziv" : "Crna"
+    },
+    {
+        "id" : 4,
+        "naziv" : "Siva"
+    },
+    {
+        "id" : 5,
+        "naziv" : "Braon"
+    },
+    {
+        "id" : 6,
+        "naziv" : "Plava"
+    },
+    {
+        "id" : 7,
+        "naziv" : "Bordo"
+    },
+    {
+        "id" : 8,
+        "naziv" : "Zelena"
+    },
+    {
+        "id" : 9,
+        "naziv" : "Sareno"
+    }
+]

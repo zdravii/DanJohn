@@ -1,0 +1,578 @@
+[
+    {
+        "slika" : "assets/img/muskajaknadnjbomber.jpg",
+        "popust" : 49,
+        "naziv" : "Muška jakna DNJ bomber",
+        "cena" : {
+            "staraCena" : 21.590,
+            "novaCena" : 10.999
+        },
+        "idBoje" : 1,
+        "idKategorije" : 3,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/muska jakna dnj bomber plava.jpg",
+        "popust" : 49,
+        "naziv" : "Muška jakna DNJ bomber plava",
+        "cena" : {
+            "staraCena" : 21.590,
+            "novaCena" : 10.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 3,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/dnj prosiveni prsluk.jpg",
+        "popust" : 35,
+        "naziv" : "DNJ prošiveni prsluk",
+        "cena" : {
+            "staraCena" : 12.290,
+            "novaCena" : 7.999
+        },
+        "idBoje" : 8,
+        "idKategorije" : 6,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" : "assets/img/dnj sivi prosiveni prsluk.jpg",
+        "popust" : 35,
+        "naziv" : "DNJ sivi prošiveni prsluk",
+        "cena" : {
+            "staraCena" : 12.290,
+            "novaCena" : 7.999
+        },
+        "idBoje" : 4,
+        "idKategorije" : 6,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" : "assets/img/dnj muska jakna.jpg",
+        "popust" : 43,
+        "naziv" : "DNJ muška jakna",
+        "cena" : {
+            "staraCena" : 13.990,
+            "novaCena" : 7.999
+        },
+        "idBoje" : 4,
+        "idKategorije" : 3,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/muska jakna dnj parka.jpg",
+        "popust" : 49,
+        "naziv" : "Muška jakna DNJ Parka",
+        "cena" : {
+            "staraCena" : 21.590,
+            "novaCena" : 10.999
+        },
+        "idBoje" : 4,
+        "idKategorije" : 3,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" : "assets/img/muska plava jakna dnj parka.jpg",
+        "popust" : 49,
+        "naziv" : "Muška plava jakna DNJ Parka",
+        "cena" : {
+            "staraCena" : 21.590,
+            "novaCena" : 10.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 3,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" : "assets/img/zelena muska jakna.jpg",
+        "popust" : 32,
+        "naziv" : "Zelena muška jakna",
+        "cena" : {
+            "staraCena" : 18.990,
+            "novaCena" : 12.999
+        },
+        "idBoje" : 8,
+        "idKategorije" : 3,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" : "assets/img/siva prosivena jakna.jpg",
+        "popust" : 37,
+        "naziv" : "Siva prošivena jakna",
+        "cena" : {
+            "staraCena" : 18.990,
+            "novaCena" : 11.999
+        },
+        "idBoje" : 4,
+        "idKategorije" : 3,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/bomber muska jakna braon.jpg",
+        "popust" : 36,
+        "naziv" : "Bomber muška jakna braon",
+        "cena" : {
+            "staraCena" : 16.990,
+            "novaCena" : 10.799
+        },
+        "idBoje" : 5,
+        "idKategorije" : 3,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/oxford muska bordo kosulja.jpg",
+        "popust" : 50,
+        "naziv" : "Oxford muška bordo košulja",
+        "cena" : {
+            "staraCena" : 5.990,
+            "novaCena" : 2.999
+        },
+        "idBoje" : 7,
+        "idKategorije" : 1,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/svetloplava muska kosulja.jpg",
+        "popust" : 33,
+        "naziv" : "Svetloplava muška košulja",
+        "cena" : {
+            "staraCena" : 5.990,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 1,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" :"assets/img/muska teget kosulja.jpg",
+        "popust" : 50,
+        "naziv" : "Muška teget košulja",
+        "cena" : {
+            "staraCena" : 5.990,
+            "novaCena" : 2.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 1,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/Karirana muska kosulja.jpg",
+        "popust" : 33,
+        "naziv" : "Karirana muška košulja",
+        "cena" : {
+            "staraCena" : 5.990,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 9,
+        "idKategorije" : 1,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" : "assets/img/braon kosulja oxford.jpg",
+        "popust" : 50,
+        "naziv" : "Braon košulja Oxford",
+        "cena" : {
+            "staraCena" : 5.990,
+            "novaCena" : 2.999
+        },
+        "idBoje" : 5,
+        "idKategorije" : 1,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" : "assets/img/kosulja na bele pruge.jpg",
+        "popust" : 18,
+        "naziv" : "Košulja na bele pruge",
+        "cena" : {
+            "staraCena" : 6.790,
+            "novaCena" : 5.599
+        },
+        "idBoje" : 6,
+        "idKategorije" : 1,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/plava kosulja sa italijanskom kragnom.jpg",
+        "popust" : 20,
+        "naziv" : "Plava košulja sa italijanskom kragnom",
+        "cena" : {
+            "staraCena" : 5.990,
+            "novaCena" : 4.799
+        },
+        "idBoje" : 6,
+        "idKategorije" : 1,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/plava uska kosulja.jpg",
+        "popust" : null,
+        "naziv" : "Plava uska košulja",
+        "cena" : {
+            "staraCena" : null,
+            "novaCena" : 5.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 1,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" : "assets/img/bela uska kosulja.jpg",
+        "popust" : null,
+        "naziv" : "Bela uska kosulja",
+        "cena" : {
+            "staraCena" : null,
+            "novaCena" : 5.999
+        },
+        "idBoje" : 2,
+        "idKategorije" : 1,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/dnj chino plave pantalone.jpg",
+        "popust" : 37,
+        "naziv" : "DNJ Chino plave pantalone",
+        "cena" : {
+            "staraCena" : 9.590,
+            "novaCena" : 5.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 2,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" : "assets/img/plave muske pantalone za odelo.jpg",
+        "popust" : 26,
+        "naziv" : "Plave muške pantalone za odelo",
+        "cena" : {
+            "staraCena" : 6.790,
+            "novaCena" : 4.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 2,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/crne muske pantalone.jpg",
+        "popust" : null,
+        "naziv" : "Crne muške pantalone",
+        "cena" : {
+            "staraCena" : null,
+            "novaCena" : 5.999
+        },
+        "idBoje" : 3,
+        "idKategorije" : 2,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" :  "assets/img/muske sive pantalone.jpg",
+        "popust" : 30,
+        "naziv" : "Muške sive pantalone",
+        "cena" : {
+            "staraCena" : 7.990,
+            "novaCena" : 5.599
+        },
+        "idBoje" : 4,
+        "idKategorije" : 2,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" : "assets/img/muske bele pantalone.jpg",
+        "popust" : 19,
+        "naziv" : "Muške bele pantalone",
+        "cena" : {
+            "staraCena" : 6.790,
+            "novaCena" : 5.499
+        },
+        "idBoje" : 2,
+        "idKategorije" : 2,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" : "assets/img/muske plave pantalone.jpg",
+        "popust" : 19,
+        "naziv" : "Muške plave pantalone",
+        "cena" : {
+            "staraCena" : 6.790,
+            "novaCena" : 5.499
+        },
+        "idBoje" : 6,
+        "idKategorije" : 2,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" : "assets/img/muske bordo pantalone.jpg",
+        "popust" : 19,
+        "naziv" : "Muške bordo pantalone",
+        "cena" : {
+            "staraCena" : 6.790,
+            "novaCena" : 5.499
+        },
+        "idBoje" : 7,
+        "idKategorije" : 2,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/sive pantalone sa naborima.jpg",
+        "popust" : 31,
+        "naziv" : "Sive pantalone sa naorima",
+        "cena" : {
+            "staraCena" : 7.990,
+            "novaCena" : 5.499
+        },
+        "idBoje" : 4,
+        "idKategorije" : 2,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" :  "assets/img/crne pantalone cavalry.jpg",
+        "popust" : 31,
+        "naziv" : "Crne pantalone Cavalry",
+        "cena" : {
+            "staraCena" : 7.990,
+            "novaCena" : 5.499
+        },
+        "idBoje" : 3,
+        "idKategorije" : 2,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/bez pantalone cavalry.jpg",
+        "popust" : 31,
+        "naziv" : "Bež pantalone Cavalry",
+        "cena" : {
+            "staraCena" : 21.590,
+            "novaCena" : 10.999
+        },
+        "idBoje" : 1,
+        "idKategorije" : 2,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" : "assets/img/crne pantalone.jpg",
+        "popust" : 31,
+        "naziv" : "Crne pantalone",
+        "cena" : {
+            "staraCena" : 7.990,
+            "novaCena" : 5.499
+        },
+        "idBoje" : 3,
+        "idKategorije" : 2,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" :  "assets/img/muski sako sa duplim kopcanjem.jpg",
+        "popust" : 36,
+        "naziv" : "Muški sako sa duplim kopčanjem",
+        "cena" : {
+            "staraCena" : 20.280,
+            "novaCena" : 12.999
+        },
+        "idBoje" : 3,
+        "idKategorije" : 5,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" :  "assets/img/princ od velsa sivi sako.jpg",
+        "popust" : 41,
+        "naziv" : "Princ od Velsa sivi sako",
+        "cena" : {
+            "staraCena" : 16.990,
+            "novaCena" : 9.999
+        },
+        "idBoje" : 4,
+        "idKategorije" : 5,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" :  "assets/img/muski sako navy check.jpg",
+        "popust" : 33,
+        "naziv" : "Muški sako Navy Check",
+        "cena" : {
+            "staraCena" : 17.990,
+            "novaCena" : 11.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 5,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" :  "assets/img/muski sako antracite.jpg",
+        "popust" : null,
+        "naziv" : "Muški sako Antracite",
+        "cena" : {
+            "staraCena" : null,
+            "novaCena" : 16.999
+        },
+        "idBoje" : 4,
+        "idKategorije" : 5,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" :  "assets/img/crni muski sako.jpg",
+        "popust" : null,
+        "naziv" : "Crni muški sako",
+        "cena" : {
+            "staraCena" : null,
+            "novaCena" : 12.999
+        },
+        "idBoje" : 3,
+        "idKategorije" : 5,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/tamnolpavi sako sa duplim kopcanjem.jpg",
+        "popust" : 32,
+        "naziv" : "Tamnoplavi sako sa duplim kopčnjem",
+        "cena" : {
+            "staraCena" : 18.990,
+            "novaCena" : 12.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 5,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/plavi sako melange.jpg",
+        "popust" : 47,
+        "naziv" : "Plavi sako Melange",
+        "cena" : {
+            "staraCena" : 18.990,
+            "novaCena" : 9.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 5,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" : "assets/img/princ od velsa sivi sako 2.jpg",
+        "popust" : 44,
+        "naziv" : "Princ od velsa sivi sako",
+        "cena" : {
+            "staraCena" : 17.990,
+            "novaCena" : 9.999
+        },
+        "idBoje" : 4,
+        "idKategorije" : 5,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/crni dzemper sa polo kragnom.jpg",
+        "popust" : 20,
+        "naziv" : "Crni džemepr sa polo kragnom",
+        "cena" : {
+            "staraCena" : 4.990,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 3,
+        "idKategorije" : 4,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" : "assets/img/dzemper sa polo kragnom.jpg",
+        "popust" : 20,
+        "naziv" : "Džemper sa polo kragnom",
+        "cena" : {
+            "staraCena" : 4.990,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 3,
+        "idKategorije" : 4,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" : "assets/img/plavi dzemper sa polo kragnom.jpg",
+        "popust" : 20,
+        "naziv" : "Plavi džemper sa polo kragnom",
+        "cena" : {
+            "staraCena" : 4.990,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 4,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/muski braon dzemper.jpg",
+        "popust" : 26,
+        "naziv" : "Muški braon džemper",
+        "cena" : {
+            "staraCena" : 6.790,
+            "novaCena" : 4.999
+        },
+        "idBoje" : 5,
+        "idKategorije" : 4,
+        "idMaterijala" : 4
+    },
+    {
+        "slika" : "assets/img/muski sivi dzemper.jpg",
+        "popust" : 26,
+        "naziv" : "Muški sivi džemper",
+        "cena" : {
+            "staraCena" : 6.790,
+            "novaCena" : 4.999
+        },
+        "idBoje" : 4,
+        "idKategorije" : 4,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/plavi dzemper sa zipom.jpg",
+        "popust" : 41,
+        "naziv" : "Plavi džemper sa zipom",
+        "cena" : {
+            "staraCena" : 6.790,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 4,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/rolka sa tekturom burro.jpg",
+        "popust" : 33,
+        "naziv" : "Rolka sa teksturom Burro",
+        "cena" : {
+            "staraCena" : 5.990,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 4,
+        "idKategorije" : 7,
+        "idMaterijala" : 1
+    },
+    {
+        "slika" : "assets/img/muska rolka sa teksturom.jpg",
+        "popust" : 33,
+        "naziv" : "Muška rolka sa teksturom",
+        "cena" : {
+            "staraCena" : 5.990,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 6,
+        "idKategorije" : 7,
+        "idMaterijala" : 2
+    },
+    {
+        "slika" : "assets/img/muska rolka panna sa teksturom.jpg",
+        "popust" : 33,
+        "naziv" : "Muška rolka Panna sa teksturom",
+        "cena" : {
+            "staraCena" : 5.990,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 1,
+        "idKategorije" : 7,
+        "idMaterijala" : 3
+    },
+    {
+        "slika" : "assets/img/rolka bordeaux.jpg",
+        "popust" : 20,
+        "naziv" : "Rolka Brodeaux",
+        "cena" : {
+            "staraCena" : 4.990,
+            "novaCena" : 3.999
+        },
+        "idBoje" : 7,
+        "idKategorije" : 7,
+        "idMaterijala" : 1
+    }
+]

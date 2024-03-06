@@ -1,0 +1,14 @@
+[
+    {
+        "naziv" : "Početna",
+        "href" : "index.html"
+    },
+    {
+        "naziv" : "Proizvodi",
+        "href" : "proizvodi.html"
+    },
+    {
+        "naziv" : "Autor",
+        "href" : "autor.html"
+    }
+]

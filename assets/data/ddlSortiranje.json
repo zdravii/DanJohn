@@ -1,0 +1,31 @@
+[
+    {
+        "id" : 0,
+        "naziv" : "Izaberite..."
+    },
+    {
+        "id" : "poCeniAsc",
+        "naziv" : "Po ceni - rastuće"
+    },
+    {
+        "id" : "poCeniDesc",
+        "naziv" : "Po ceni - opadajuće"
+    },
+    {
+        "id" : "poNazivuAsc",
+        "naziv" : "Po nazivu - rastuće"
+    },
+    {
+        "id" : "poNazivuDesc",
+        "naziv" : "Po nazivu - opadajuće"
+    },
+    {
+        "id" : "poPopustuAsc",
+        "naziv" : "Po popustu - rastuće"
+    },
+    {
+        "id" : "poPopustuDesc",
+        "naziv" : "Po popustu - opadajuće"
+    }
+
+]
