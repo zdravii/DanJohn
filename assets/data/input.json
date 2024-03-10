@@ -2,26 +2,31 @@
     {
         "type" : "text",
         "name" : "ime",
-        "placeholder" : "Ime"
+        "dodatno" : "Ime"
     },
     {
         "type" : "text",
         "name" : "prezime",
-        "placeholder" : "Prezime"
+        "dodatno" : "Prezime"
     },
     {
         "type" : "email",
         "name" : "email",
-        "placeholder" : "E-mail"
+        "dodatno" : "E-mail"
     },
     {
         "type" : "text",
         "name" : "adresa",
-        "placeholder" : "Adresa"
+        "dodatno" : "Adresa"
     },
     {
-        "type" : "text",
-        "name" : "broj",
-        "placeholder" : "Broj telefona (+38161-234-567)"
+        "type" : "radio",
+        "name" : "isporuka",
+        "dodatno" : "brza"
+    },
+    {
+        "type" : "radio",
+        "name" : "isporuka",
+        "dodatno" : "obicna"
     }
 ]

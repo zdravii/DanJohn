@@ -1,5 +1,6 @@
 [
     {
+        "id" : 1,
         "slika" : "assets/img/muskajaknadnjbomber.jpg",
         "popust" : 49,
         "naziv" : "Muška jakna DNJ bomber",
@@ -12,6 +13,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 2,
         "slika" : "assets/img/muska jakna dnj bomber plava.jpg",
         "popust" : 49,
         "naziv" : "Muška jakna DNJ bomber plava",
@@ -24,6 +26,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 3,
         "slika" : "assets/img/dnj prosiveni prsluk.jpg",
         "popust" : 35,
         "naziv" : "DNJ prošiveni prsluk",
@@ -36,6 +39,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 4,
         "slika" : "assets/img/dnj sivi prosiveni prsluk.jpg",
         "popust" : 35,
         "naziv" : "DNJ sivi prošiveni prsluk",
@@ -48,6 +52,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 5,
         "slika" : "assets/img/dnj muska jakna.jpg",
         "popust" : 43,
         "naziv" : "DNJ muška jakna",
@@ -60,6 +65,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 6,
         "slika" : "assets/img/muska jakna dnj parka.jpg",
         "popust" : 49,
         "naziv" : "Muška jakna DNJ Parka",
@@ -72,6 +78,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 7,
         "slika" : "assets/img/muska plava jakna dnj parka.jpg",
         "popust" : 49,
         "naziv" : "Muška plava jakna DNJ Parka",
@@ -84,6 +91,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 8,
         "slika" : "assets/img/zelena muska jakna.jpg",
         "popust" : 32,
         "naziv" : "Zelena muška jakna",
@@ -96,6 +104,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 8,
         "slika" : "assets/img/siva prosivena jakna.jpg",
         "popust" : 37,
         "naziv" : "Siva prošivena jakna",
@@ -108,6 +117,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 9,
         "slika" : "assets/img/bomber muska jakna braon.jpg",
         "popust" : 36,
         "naziv" : "Bomber muška jakna braon",
@@ -120,6 +130,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 10,
         "slika" : "assets/img/oxford muska bordo kosulja.jpg",
         "popust" : 50,
         "naziv" : "Oxford muška bordo košulja",
@@ -132,6 +143,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 11,
         "slika" : "assets/img/svetloplava muska kosulja.jpg",
         "popust" : 33,
         "naziv" : "Svetloplava muška košulja",
@@ -144,6 +156,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 12,
         "slika" :"assets/img/muska teget kosulja.jpg",
         "popust" : 50,
         "naziv" : "Muška teget košulja",
@@ -156,6 +169,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 13,
         "slika" : "assets/img/Karirana muska kosulja.jpg",
         "popust" : 33,
         "naziv" : "Karirana muška košulja",
@@ -168,6 +182,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 14,
         "slika" : "assets/img/braon kosulja oxford.jpg",
         "popust" : 50,
         "naziv" : "Braon košulja Oxford",
@@ -180,6 +195,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 15,
         "slika" : "assets/img/kosulja na bele pruge.jpg",
         "popust" : 18,
         "naziv" : "Košulja na bele pruge",
@@ -192,6 +208,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 16,
         "slika" : "assets/img/plava kosulja sa italijanskom kragnom.jpg",
         "popust" : 20,
         "naziv" : "Plava košulja sa italijanskom kragnom",
@@ -204,6 +221,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 17,
         "slika" : "assets/img/plava uska kosulja.jpg",
         "popust" : null,
         "naziv" : "Plava uska košulja",
@@ -216,6 +234,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 18,
         "slika" : "assets/img/bela uska kosulja.jpg",
         "popust" : null,
         "naziv" : "Bela uska kosulja",
@@ -228,6 +247,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 19,
         "slika" : "assets/img/dnj chino plave pantalone.jpg",
         "popust" : 37,
         "naziv" : "DNJ Chino plave pantalone",
@@ -240,6 +260,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 20,
         "slika" : "assets/img/plave muske pantalone za odelo.jpg",
         "popust" : 26,
         "naziv" : "Plave muške pantalone za odelo",
@@ -252,6 +273,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 21,
         "slika" : "assets/img/crne muske pantalone.jpg",
         "popust" : null,
         "naziv" : "Crne muške pantalone",
@@ -264,6 +286,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 22,
         "slika" :  "assets/img/muske sive pantalone.jpg",
         "popust" : 30,
         "naziv" : "Muške sive pantalone",
@@ -276,6 +299,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 23,
         "slika" : "assets/img/muske bele pantalone.jpg",
         "popust" : 19,
         "naziv" : "Muške bele pantalone",
@@ -288,6 +312,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 24,
         "slika" : "assets/img/muske plave pantalone.jpg",
         "popust" : 19,
         "naziv" : "Muške plave pantalone",
@@ -300,6 +325,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 25,
         "slika" : "assets/img/muske bordo pantalone.jpg",
         "popust" : 19,
         "naziv" : "Muške bordo pantalone",
@@ -312,6 +338,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 26,
         "slika" : "assets/img/sive pantalone sa naborima.jpg",
         "popust" : 31,
         "naziv" : "Sive pantalone sa naorima",
@@ -324,6 +351,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 27,
         "slika" :  "assets/img/crne pantalone cavalry.jpg",
         "popust" : 31,
         "naziv" : "Crne pantalone Cavalry",
@@ -336,6 +364,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 28,
         "slika" : "assets/img/bez pantalone cavalry.jpg",
         "popust" : 31,
         "naziv" : "Bež pantalone Cavalry",
@@ -348,6 +377,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 29,
         "slika" : "assets/img/crne pantalone.jpg",
         "popust" : 31,
         "naziv" : "Crne pantalone",
@@ -360,6 +390,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 30,
         "slika" :  "assets/img/muski sako sa duplim kopcanjem.jpg",
         "popust" : 36,
         "naziv" : "Muški sako sa duplim kopčanjem",
@@ -372,6 +403,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 31,
         "slika" :  "assets/img/princ od velsa sivi sako.jpg",
         "popust" : 41,
         "naziv" : "Princ od Velsa sivi sako",
@@ -384,6 +416,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 32,
         "slika" :  "assets/img/muski sako navy check.jpg",
         "popust" : 33,
         "naziv" : "Muški sako Navy Check",
@@ -396,6 +429,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 33,
         "slika" :  "assets/img/muski sako antracite.jpg",
         "popust" : null,
         "naziv" : "Muški sako Antracite",
@@ -408,6 +442,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 34,
         "slika" :  "assets/img/crni muski sako.jpg",
         "popust" : null,
         "naziv" : "Crni muški sako",
@@ -420,6 +455,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 35,
         "slika" : "assets/img/tamnolpavi sako sa duplim kopcanjem.jpg",
         "popust" : 32,
         "naziv" : "Tamnoplavi sako sa duplim kopčnjem",
@@ -432,6 +468,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 36,
         "slika" : "assets/img/plavi sako melange.jpg",
         "popust" : 47,
         "naziv" : "Plavi sako Melange",
@@ -444,6 +481,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 37,
         "slika" : "assets/img/princ od velsa sivi sako 2.jpg",
         "popust" : 44,
         "naziv" : "Princ od velsa sivi sako",
@@ -456,6 +494,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 38,
         "slika" : "assets/img/crni dzemper sa polo kragnom.jpg",
         "popust" : 20,
         "naziv" : "Crni džemepr sa polo kragnom",
@@ -468,6 +507,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 39,
         "slika" : "assets/img/dzemper sa polo kragnom.jpg",
         "popust" : 20,
         "naziv" : "Džemper sa polo kragnom",
@@ -480,6 +520,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 40,
         "slika" : "assets/img/plavi dzemper sa polo kragnom.jpg",
         "popust" : 20,
         "naziv" : "Plavi džemper sa polo kragnom",
@@ -492,6 +533,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 41,
         "slika" : "assets/img/muski braon dzemper.jpg",
         "popust" : 26,
         "naziv" : "Muški braon džemper",
@@ -504,6 +546,7 @@
         "idMaterijala" : 4
     },
     {
+        "id" : 42,
         "slika" : "assets/img/muski sivi dzemper.jpg",
         "popust" : 26,
         "naziv" : "Muški sivi džemper",
@@ -516,6 +559,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 43,
         "slika" : "assets/img/plavi dzemper sa zipom.jpg",
         "popust" : 41,
         "naziv" : "Plavi džemper sa zipom",
@@ -528,6 +572,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 44,
         "slika" : "assets/img/rolka sa tekturom burro.jpg",
         "popust" : 33,
         "naziv" : "Rolka sa teksturom Burro",
@@ -540,6 +585,7 @@
         "idMaterijala" : 1
     },
     {
+        "id" : 45,
         "slika" : "assets/img/muska rolka sa teksturom.jpg",
         "popust" : 33,
         "naziv" : "Muška rolka sa teksturom",
@@ -552,6 +598,7 @@
         "idMaterijala" : 2
     },
     {
+        "id" : 46,
         "slika" : "assets/img/muska rolka panna sa teksturom.jpg",
         "popust" : 33,
         "naziv" : "Muška rolka Panna sa teksturom",
@@ -564,6 +611,7 @@
         "idMaterijala" : 3
     },
     {
+        "id" : 47,
         "slika" : "assets/img/rolka bordeaux.jpg",
         "popust" : 20,
         "naziv" : "Rolka Brodeaux",

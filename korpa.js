@@ -18,8 +18,6 @@ function ajaxPoziv(nazivFajla,rezultat) {
 
     const regexMail = /^[a-z]((\.|-|)?[a-z0-9]){2,}@[a-z]((\.|-|)?[a-z0-9]+){2,}\.[a-z]{2,6}$/;
 
-    // const regexAdresa =  /^[A-ZČŠĆŽĐ][a-zčšćžđ]{4,30}$/;
-
     const regexBroj = /^\+381[0-9]{2}-[0-9]{3}-[0-9]{3}$/;
 
 // REGEX
@@ -40,13 +38,21 @@ window.onload = function() {
     function ipsisForme(inputi) {
         let ispis = "";
         for (let input of inputi) {
-            ispis += `<input type="${input.type}" name="${input.name}" id="${input.name}" placeholder="${input.placeholder}" class="form-control mt-2">`
+            if (input.type == "text" || input.type == "email") {
+                ispis += `<input type="${input.type}" name="${input.name}" id="${input.name}" placeholder="${input.dodatno}" class="form-control mt-2">`
+            }
+        }
+        ispis+=`<label for="isporuka" class="mt-1 ms-1">Isporuka : </label>`;
+        for (const input of inputi) {
+            if (input.type == "radio") {
+                ispis+=` ${input.dodatno}<input class="ms-2 me-2" type="${input.type}" name="${input.name}" id="${input.dodatno}">`
+            }
         }
         ispis+=`<input type="button" value="Potvrdi" id="submit" class="form-control mt-2 border border-5">`
         document.getElementById("forma").innerHTML=ispis;
     }
 
-    function ispitiajVrednosti(regex,input) {
+    function ispitajVrednosti(regex,input) {
         var nizGresaka = [];
         var brojGresaka = 0;
         var input = document.getElementById(`${input}`);
@@ -67,10 +73,6 @@ window.onload = function() {
                 nizGresaka.push("Adresa nije unešena u ispravnom formatu!");
                 brojGresaka++;
             }
-            if (input == 'broj') {
-                nizGresaka.push("Broj telefona nije unešen u ispravnom formatu!");
-                brojGresaka++;
-            }
         }
     }
 
@@ -82,14 +84,22 @@ window.onload = function() {
         ipsisForme(rezultat);
     })
 
-    var submit = document.getElementById("submit");
+    // var submit = document.getElementById("submit");
 
-    submit.addEventListener("click",function () {
-        ispitiajVrednosti(regexIme,ime);
-        ispitiajVrednosti(regexPrezime,prezime);
-        ispitiajVrednosti(regexMail,email);
-        ispitiajVrednosti(regexBroj,broj);
-        console.log(brojGresaka);
+    // submit.addEventListener("click",function () {
+    //     ispitajVrednosti(regexIme,ime);
+    //     ispitajVrednosti(regexPrezime,prezime);
+    //     ispitajVrednosti(regexMail,email);
+    //     ispitajVrednosti(regexBroj,broj);
+    //     console.log(brojGresaka);
+    // })
+
+    $('#submit').click(function() {
+        ispitajVrednosti(regexIme,ime);
+        ispitajVrednosti(regexPrezime,prezime);
+        ispitajVrednosti(regexMail,email);
+        ispitajVrednosti(regexBroj,broj);
+       console.log(brojGresaka);
     })
 
 }

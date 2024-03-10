@@ -67,7 +67,7 @@ window.onload = function() {
                                                 <p class="text-decoration-line-through">${obj.cena.staraCena}9,00 RSD</p><p>${obj.cena.novaCena},00 RSD</p>
                                             </div>
                                             <div class="col-6">
-                                                <button type="button" class="btn btn-dark mt-3">Dodaj u korpu</button>
+                                                <button type="button" data-id=${obj.id} class="btn btn-dark mt-3">Dodaj u korpu</button>
                                             </div>
                                         </div>
                                     </div>`
@@ -81,7 +81,7 @@ window.onload = function() {
                                 <p>${obj.cena.novaCena},00 RSD</p>
                             </div>
                             <div class="col-6">
-                                <button type="button" class="btn btn-dark">Dodaj u korpu</button>
+                                <button type="button" data-id=${obj.id} class="btn btn-dark">Dodaj u korpu</button>
                             </div>
                         </div>
                     </div>`
@@ -101,7 +101,7 @@ window.onload = function() {
                                                 <p class="text-decoration-line-through">${obj.cena.staraCena}9,00 RSD</p><p>${obj.cena.novaCena},00 RSD</p>
                                             </div>
                                             <div class="col-6">
-                                                <button type="button" class="btn btn-dark mt-3">Dodaj u korpu</button>
+                                                <button type="button" data-id=${obj.id} class="btn btn-dark mt-3">Dodaj u korpu</button>
                                             </div>
                                         </div>
                             </div>`
@@ -115,7 +115,7 @@ window.onload = function() {
                                 <p>${obj.cena.novaCena},00 RSD</p>
                             </div>
                             <div class="col-6">
-                                <button type="button" class="btn btn-dark">Dodaj u korpu</button>
+                                <button type="button" data-id=${obj.id} class="btn btn-dark">Dodaj u korpu</button>
                             </div>
                         </div>
                     </div>`
@@ -128,6 +128,68 @@ window.onload = function() {
             ispis += '<div class="row"><div class="col-lg-12><p class="h1">Trenutno nema proizvoda!</p></div></div>';
         }
         document.getElementById("ispisProizvoda").innerHTML = ispis;
+        $('.btn').click(dodajUKorpu);
+    }
+
+    function dodajUKorpu() {
+        let idProizvoda = $(this).data('id');
+        // console.log(idProizvoda);
+        var proizovdIzKorpe = uzmiItemIzLocalStorage("proizvodIzKorpe")
+        if (proizovdIzKorpe) {
+            if (daLiJeProizvodVecUKorpi()) {
+                uvecajKolicinu();
+            }
+            else{
+                DodajProizvodUKorpu()
+            }
+        }
+        else {
+            dodajPrviProizvodUKorpu();
+        }
+
+        function dodajPrviProizvodUKorpu() {
+            let proizvodi = [];
+            proizvodi[0] = {
+                id : idProizvoda,
+                kolicina : 1
+            }
+            dodajItemULocalStorage("proizvodIzKorpe",proizvodi)
+        }
+
+        function daLiJeProizvodVecUKorpi() {
+            return proizovdIzKorpe.filter(p=>p.id == idProizvoda).length;
+        }
+
+        function uvecajKolicinu() {
+            let proizvodiLS = uzmiItemIzLocalStorage("proizvodIzKorpe");
+            for (let proizvod of proizvodiLS) {
+                if(proizvod.id == idProizvoda){
+                    proizvod.kolicina++;
+                    break;
+                }
+            }
+            dodajItemULocalStorage("proizvodIzKorpe",proizvodiLS);
+        }
+
+        function DodajProizvodUKorpu() {
+            let nizLS = uzmiItemIzLocalStorage("proizvodIzKorpe");
+            nizLS.push({
+                id : idProizvoda,
+                kolicina : 1
+            });
+            dodajItemULocalStorage("proizvodIzKorpe",nizLS);
+        }
+
+    }
+
+    
+
+    function dodajItemULocalStorage(key,value) {
+        localStorage.setItem(key,JSON.stringify(value));
+    }
+
+    function uzmiItemIzLocalStorage(item) {
+        return JSON.parse(localStorage.getItem(item));
     }
 
     ajaxPoziv("ddlBoje.json",function(rezultat){
@@ -249,11 +311,5 @@ window.onload = function() {
             }
             ispisProizvoda(filtriraniProizvodi);
         })
-    })
-
-    // var btn = document.getElementsByClassName("btn");
-
-    $(document).on("click", ".btn" , function() {
-        console.log(this.naziv);
     })
 }
