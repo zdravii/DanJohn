@@ -9,6 +9,7 @@ function ajaxPoziv(nazivFajla,rezultat) {
         }
     })
 }
+
 window.onload = function () {
         
     function ispisMenia(nizMeni) {
@@ -33,45 +34,38 @@ window.onload = function () {
             ispisMenia(rezultat);
     });
 
-    function ispisPrecica(nizPrecica) {
-            let ispis ="";
-            for (let precica of nizPrecica) {
-                ispis +=`<div class="col-lg-6"><img class="" src="${precica.slika}" alt="${precica.naziv}"/><div class=""><h3>${precica.naslov}</h3><p>${precica.tekst}</p></div></div>`
-            }
-            document.getElementById("precice").innerHTML = ispis;
-    }
+    // function ispisPrecica(nizPrecica) {
+    //         let ispis ="";
+    //         for (let precica of nizPrecica) {
+    //             ispis +=`<div class="col-lg-6"><img class="" src="${precica.slika}" alt="${precica.naziv}"/><div class=""><h3>${precica.naslov}</h3><p>${precica.tekst}</p></div></div>`
+    //         }
+    //         document.getElementById("precice").innerHTML = ispis;
+    // }
 
-    function ispisNovosti(novosti) {
-            let ispis = "";
-            for (let novost of novosti) {
-                ispis += `<div class="row"><h4>${novost.naslov}</h4></div><div class="row"><p>${novost.tekst}</p></div>`
-            }
-            document.getElementById("novosti").innerHTML=ispis;
-    }
+    // function ispisNovosti(novosti) {
+    //         let ispis = "";
+    //         for (let novost of novosti) {
+    //             ispis += `<div class="row"><h4>${novost.naslov}</h4></div><div class="row"><p>${novost.tekst}</p></div>`
+    //         }
+    //         document.getElementById("novosti").innerHTML=ispis;
+    // }
 
-    ajaxPoziv("precica.json",function (rezultat) {
-            ispisPrecica(rezultat);
-    })
+    // ajaxPoziv("precica.json",function (rezultat) {
+    //         ispisPrecica(rezultat);
+    // })
 
-    ajaxPoziv("novosti.json",function (rezultat) {
-        ispisNovosti(rezultat);
-    })
+    // ajaxPoziv("novosti.json",function (rezultat) {
+    //     ispisNovosti(rezultat);
+    // })
 
-    var swiper = new Swiper(".mySwiper", {
-        pagination: {
-          el: ".swiper-pagination",
-          type: "fraction",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+    // var swiper = new Swiper(".mySwiper", {
+    //     pagination: {
+    //       el: ".swiper-pagination",
+    //       type: "fraction",
+    //     },
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     },
+    //   });
 }
-
-
-    
-
-    
-
-    

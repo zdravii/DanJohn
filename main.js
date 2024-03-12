@@ -10,32 +10,69 @@ function ajaxPoziv(nazivFajla,rezultat) {
     })
 }
 
-window.onload = function() {
-
-    // ispisBrojaPorizvoda();
-
+window.onload = function () {
+        
     function ispisMenia(nizMeni) {
-        let ispis = '<ul class="navbar-nav">'
-        let brojac = 0
-        for (let obj of nizMeni) {
-            if (brojac == 1) {
-                ispis += `<li class="nav-item">
-                <a class="nav-link active" href="${obj.href}">${obj.naziv}</a>
-                </li>`
+            let ispis = '<ul class="navbar-nav">'
+            let brojac = 0
+            for (let obj of nizMeni) {
+                if (brojac == 0) {
+                    ispis += `<li class="nav-item">
+                    <a class="nav-link active" href="${obj.href}">${obj.naziv}</a>
+                    </li>`
+                }
+                else{ispis += `<li class="nav-item">
+                <a class="nav-link" href="${obj.href}">${obj.naziv}</a>
+                </li>`}
+                brojac++;
             }
-            else{ispis += `<li class="nav-item">
-            <a class="nav-link" href="${obj.href}">${obj.naziv}</a>
-            </li>`}
-            brojac++;
-        }
-        ispis += '</ul>'
-        document.getElementById("navbarNav").innerHTML=ispis;
+            ispis += '</ul>'
+            document.getElementById("navbarNav").innerHTML=ispis;
     }
-
+    
     ajaxPoziv("meni.json",function(rezultat) {
             ispisMenia(rezultat);
     });
-        
+
+    // function ispisPrecica(nizPrecica) {
+    //         let ispis ="";
+    //         for (let precica of nizPrecica) {
+    //             ispis +=`<div class="col-lg-6"><img class="" src="${precica.slika}" alt="${precica.naziv}"/><div class=""><h3>${precica.naslov}</h3><p>${precica.tekst}</p></div></div>`
+    //         }
+    //         document.getElementById("precice").innerHTML = ispis;
+    // }
+
+    // function ispisNovosti(novosti) {
+    //         let ispis = "";
+    //         for (let novost of novosti) {
+    //             ispis += `<div class="row"><h4>${novost.naslov}</h4></div><div class="row"><p>${novost.tekst}</p></div>`
+    //         }
+    //         document.getElementById("novosti").innerHTML=ispis;
+    // }
+
+    // ajaxPoziv("precica.json",function (rezultat) {
+    //         ispisPrecica(rezultat);
+    // })
+
+    // ajaxPoziv("novosti.json",function (rezultat) {
+    //     ispisNovosti(rezultat);
+    // })
+
+    // var swiper = new Swiper(".mySwiper", {
+    //     pagination: {
+    //       el: ".swiper-pagination",
+    //       type: "fraction",
+    //     },
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     },
+    //   });
+}
+
+var prefikslink = "/DanJohn"
+if(window.location.pathname==prefikslink+"/proizvodi.html"){
+
     function ispisDDL(nizDDL,divZaIspis) {
         let ispis =''
         for (let obj of nizDDL) {
@@ -43,8 +80,6 @@ window.onload = function() {
         }
         document.getElementById(divZaIspis).innerHTML=ispis;
     }
-
-    ispisBrojaPorizvoda();
 
     function ispisProizvoda(nizProizvoda) {
         let ispis = '';
@@ -185,22 +220,26 @@ window.onload = function() {
             });
             dodajItemULocalStorage("proizvodIzKorpe",nizLS);
         }
+
     }
 
     function ispisBrojaPorizvoda() {
-        let proizovdIzKorpe = uzmiItemIzLocalStorage("proizvodIzKorpe");
-        if (proizovdIzKorpe) {
+        var nizProizvodaLs = uzmiItemIzLocalStorage("proizvodIzKorpe");
+        console.log(nizProizvodaLs);
+        if(nizProizvodaLs =! null){
+            // console.log(duzinaNiza);
+            let kolicinaProizvoda = nizProizvodaLs.length;
             let text = "";
-            if (proizovdIzKorpe.length == 1) {
+            if(kolicinaProizvoda == 1){
                 text = "proizvod";
             }
             else{
-                text = "proizvoda";
+                text = "proizvoda"
             }
-            $('#brojProizvoda').html(`<p class="mt-2">(${proizovdIzKorpe.length} ${text})</p>`)
+            $('#brojProizvoda').html(`${kolicinaProizvoda} ${text}`);
         }
         else{
-            $('#brojProizvoda').html('<p class="mt-2">(0 proizvoda)</p>')
+            $('#brojProizvoda').html('(0 proizvoda)');
         }
     }
 
@@ -333,3 +372,68 @@ window.onload = function() {
         })
     })
 }
+
+if(window.location.pathname==prefikslink+"/korpa.html"){
+
+    function ipsisForme(inputi) {
+        let ispis = "";
+        for (let input of inputi) {
+            if (input.type == "text" || input.type == "email") {
+                ispis += `<input type="${input.type}" name="${input.name}" id="${input.name}" placeholder="${input.dodatno}" class="form-control mt-2">`
+            }
+        }
+        ispis+=`<label for="isporuka" class="mt-1 ms-1">Isporuka : </label>`;
+        for (const input of inputi) {
+            if (input.type == "radio") {
+                ispis+=` ${input.dodatno}<input class="ms-2 me-2" type="${input.type}" name="${input.name}" id="${input.dodatno}">`
+            }
+        }
+        ispis+=`<input type="button" value="Potvrdi" id="submit" class="form-control mt-2 border border-5">`
+        document.getElementById("forma").innerHTML=ispis;
+    }
+
+    function ispitajVrednosti(regex,input) {
+        var nizGresaka = [];
+        var brojGresaka = 0;
+        var input = document.getElementById(`${input}`);
+        if(!regex.test(input.value)){
+            if(input == 'ime'){
+                nizGresaka.push("Ime nije unešeno u ispravnom formatu!");
+                brojGresaka++;
+            }
+            if (input == 'prezime') {
+                nizGresaka.push("Prezime nije unešeno u ispravnom formatu!");
+                brojGresaka++;
+            }
+            if (input == 'email') {
+                nizGresaka.push("Email nije unešen u ispravnom formatu!");
+                brojGresaka++;
+            }
+            if (input == 'adresa') {
+                nizGresaka.push("Adresa nije unešena u ispravnom formatu!");
+                brojGresaka++;
+            }
+        }
+    }
+
+    ajaxPoziv("input.json",function(rezultat){
+        ipsisForme(rezultat);
+    })
+
+    $('#submit').click(function() {
+        ispitajVrednosti(regexIme,ime);
+        ispitajVrednosti(regexPrezime,prezime);
+        ispitajVrednosti(regexMail,email);
+        ispitajVrednosti(regexBroj,broj);
+       console.log(brojGresaka);
+    })
+}
+
+
+
+
+    
+
+    
+
+    
