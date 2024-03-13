@@ -10,9 +10,5 @@
     {
         "naziv" : "Autor",
         "href" : "autor.html"
-    },
-    {
-        "naziv" : "Dokumentacija",
-        "href" : "dokumentacija.docx"
     }
 ]
