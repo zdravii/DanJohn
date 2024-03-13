@@ -281,51 +281,73 @@ window.onload = function() {
             }
             if (uslov == "poPopustuDesc") {
                 proizvodi.sort(function (a,b) {
-                    return b.popust - a.popust;
-                })
-            }
-            ispisProizvoda(proizvodi);
-        })
+              return b.popust - a.popust;
+})
+}
+     ispisProizvoda(proizvodi);
+    })
 
        
 
-    })
+})
 
-    $('.ddlFilter').on("change",function () {
+    function sortiraj(nizProizvoda, tip) {
+        console.log(nizProizvoda);
+        let sortiraniNiz = [];
+        switch (tip) {
+            case 'poCeniAsc':
+                sortiraniNiz = nizProizvoda.sort(function (a, b) {
+                    return a.cena.novaCena - b.cena.novaCena
+                })
+                break;
+        
+            case 'poCeniDesc':
+                sortiraniNiz = nizProizvoda.sort(function (a, b) {
+                    return b.cena.novaCena - a.cena.novaCena
+                })
+                break;
+            case 'poNazivuAsc':
+                sortiraniNiz = nizProizvoda.sort(function (a, b) {
+                    return a.naziv - b.naziv
+                })
+                break;
+        
+            case 'poNazivuDesc':
+                sortiraniNiz = nizProizvoda.sort(function (a, b) {
+                    return b.naziv - a.naziv
+                })
+                break;
+            case 'poPopustuAsc':
+                sortiraniNiz = nizProizvoda.sort(function (a, b) {
+                    return a.popust - b.popust
+                })
+                break;
+        
+            case 'poPopustuDesc':
+                sortiraniNiz = nizProizvoda.sort(function (a, b) {
+                    return b.popust - a.popust
+                })
+                break;
+        }
+        return sortiraniNiz;
+    }
+
+    $('.ddlFilter,.ddlSortiranje').on("change",function () {
         let idKategorije = parseInt($('#ddlFilterKategorija').val());
         let idMaterijala = parseInt($('#ddlFilterMaterijal').val());
         let idBoje = parseInt($('#ddlFilterBoja').val());
-        // console.log(idKategorije);
-        // console.log(idMaterijala);
-        // console.log(idBoje);
+        // let uslov = $("#ddlSortiranje").val();
         ajaxPoziv("proizvodi.json",function(rezultat){
-            let proizvodi = rezultat;
-            let filtriraniProizvodi = proizvodi;
-            // console.log(filtriraniProizvodi);
-            if (idKategorije) {
-                filtriraniProizvodi = filtriraniProizvodi.filter(element => element.idKategorije == idKategorije)
-            }
-            if (idBoje) {
-                filtriraniProizvodi = filtriraniProizvodi.filter(element => element.idBoje == idBoje)
-            }
-            if (idMaterijala) {
-                filtriraniProizvodi = filtriraniProizvodi.filter(element => element.idMaterijala == idMaterijala)
-            }
+            let filtriraniProizvodi = rezultat;
+            filtriraniProizvodi = idKategorije ? filtriraniProizvodi.filter(element => element.idKategorije == idKategorije) : filtriraniProizvodi;
+            filtriraniProizvodi = idBoje ? filtriraniProizvodi.filter(element => element.idBoje == idBoje) : filtriraniProizvodi;
+            filtriraniProizvodi = idMaterijala ? filtriraniProizvodi.filter(element => element.idMaterijala == idMaterijala) : filtriraniProizvodi;
+            // if (uslov != "0") {
+            //     filtriraniProizvodi = sortiraj(filtriraniProizvodi,uslov);
+            // }
+
             ispisProizvoda(filtriraniProizvodi);
         })
-        // console.log(filtriraniProizvodi);
-         // for (let proizvod of proizvodi) {
-            //     if(idKategorije == proizvod.idKategorije){
-            //         filtriraniProizvodi.push(proizvod);
-            //     }
-            //     if(idMaterijala == proizvod.idMaterijala){
-            //         filtriraniProizvodi.push(proizvod);
-            //     }
-            //     if (idBoje == proizvod.idBoje) {
-            //         filtriraniProizvodi.push(proizvod);
-            //     }
-            // }
-            // ispisProizvoda(filtriraniProizvodi);
         
     })
 }
