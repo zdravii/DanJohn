@@ -130,24 +130,6 @@ window.onload = function() {
         document.getElementById("navbarNav").innerHTML=ispis;
     }
 
-    // function ipsisForme(inputi) {
-    //     let ispis = "";
-    //     for (let input of inputi) {
-    //         if (input.type == "text" || input.type == "email") {
-    //             ispis += `<input type="${input.type}" name="${input.name}" id="${input.name}" placeholder="${input.dodatno}" class="form-control mt-2">`
-    //         }
-    //     }
-    //     ispis+=`<label for="isporuka" class="mt-1 ms-1">Isporuka : </label>`;
-    //     for (let input of inputi) {
-    //         if (input.type == "radio") {
-    //             ispis+=` ${input.dodatno}<input class="ms-2 me-2" type="${input.type}" name="${input.name}" id="${input.dodatno}">`
-    //         }
-    //     }
-    //     ispis+='<input type="button" value="Potvrdi" id="submit" class="form-control mt-2 border border-5">'
-    //     document.getElementById("forma").innerHTML=ispis;
-        
-    // }
-
     function uzmiItemIzLocalStorage(item) {
         return JSON.parse(localStorage.getItem(item));
     }
