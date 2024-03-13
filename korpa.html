@@ -48,8 +48,14 @@
             <div class="row justify-content-center mt-5 mb-5">
                 <div class="col-lg-6">
                     <form action="POST" id="forma">
-                        <!-- <input type="button" value="Potvrdi" id="submit" class="form-control mt-2 border border-5"> -->
-                        
+                        <input type="text" name="ime" placeholder="Ime" class="form-control mt-2">
+                        <input type="text" name="prezime" placeholder="Prezime" class="form-control mt-2">
+                        <input type="email" name="email" placeholder="Email" class="form-control mt-2">
+                        <input type="text" name="adresa" placeholder="Adresa" class="form-control mt-2">
+                        <input type="checkbox" name="uslov" class="ms-1">
+                        <label for="uslovi" class="mt-1 ms-1 me-2 mb-1">Slazem se sa uslovima korišćenja</label>
+                        <div id="greske"></div>
+                        <input type="submit" value="Potvrdi" class="form-control mt-1 bg-black text-light">
                     </form>
                 </div>
             </div>

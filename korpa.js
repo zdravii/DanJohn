@@ -12,11 +12,11 @@ function ajaxPoziv(nazivFajla,rezultat) {
 
 // REGEX
 
-    const regexIme = /^[A-ZČŠĆŽĐ][a-zčšćžđ]{2,15}(\s[A-ZČŠĆŽĐ][a-zčšćžđ]{2,15})?$/;
+    const regexIme = /^[A-ZČŠĆŽĐ][a-zčšćžđ]{2,15}$/;
     
-    const regexPrezime = /^[A-ZČŠĆŽĐ][a-zčšćžđ]{3,20}(\s[A-ZČŠĆŽĐ][a-zčšćžđ]{3,20})?$/;
+    const regexPrezime = /^[A-ZČŠĆŽĐ][a-zčšćžđ]{3,20}$/;
 
-    const regexMail = /^[a-z]((\.|-|)?[a-z0-9]){2,}@[a-z]((\.|-|)?[a-z0-9]+){2,}\.[a-z]{2,6}$/;
+    const regexMail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
     // const regexBroj = /^\+381[0-9]{2}-[0-9]{3}-[0-9]{3}$/;
 
@@ -130,41 +130,58 @@ window.onload = function() {
         document.getElementById("navbarNav").innerHTML=ispis;
     }
 
-    function ipsisForme(inputi) {
-        let ispis = "";
-        for (let input of inputi) {
-            if (input.type == "text" || input.type == "email") {
-                ispis += `<input type="${input.type}" name="${input.name}" id="${input.name}" placeholder="${input.dodatno}" class="form-control mt-2">`
-            }
-        }
-        ispis+=`<label for="isporuka" class="mt-1 ms-1">Isporuka : </label>`;
-        for (let input of inputi) {
-            if (input.type == "radio") {
-                ispis+=` ${input.dodatno}<input class="ms-2 me-2" type="${input.type}" name="${input.name}" id="${input.dodatno}">`
-            }
-        }
-        ispis+='<input type="button" value="Potvrdi" id="submit" class="form-control mt-2 border border-5 submit">'
-        document.getElementById("forma").innerHTML=ispis;
-        $(".submit").click(function() {
-            ispitajVrednosti(regexIme,"ime");
-            ispitajVrednosti(regexPrezime,"prezime")
-            ispitajVrednosti(regexMail,"email")
-        })
-    }
+    // function ipsisForme(inputi) {
+    //     let ispis = "";
+    //     for (let input of inputi) {
+    //         if (input.type == "text" || input.type == "email") {
+    //             ispis += `<input type="${input.type}" name="${input.name}" id="${input.name}" placeholder="${input.dodatno}" class="form-control mt-2">`
+    //         }
+    //     }
+    //     ispis+=`<label for="isporuka" class="mt-1 ms-1">Isporuka : </label>`;
+    //     for (let input of inputi) {
+    //         if (input.type == "radio") {
+    //             ispis+=` ${input.dodatno}<input class="ms-2 me-2" type="${input.type}" name="${input.name}" id="${input.dodatno}">`
+    //         }
+    //     }
+    //     ispis+='<input type="button" value="Potvrdi" id="submit" class="form-control mt-2 border border-5">'
+    //     document.getElementById("forma").innerHTML=ispis;
+        
+    // }
 
     function uzmiItemIzLocalStorage(item) {
         return JSON.parse(localStorage.getItem(item));
     }
 
-    function ispitajVrednosti(regex,input) {
-        console.log(input);
+    function ispitajVrednosti(regex,value,poruka,niz) {
+        if(!regex.test(value)){
+            niz.push(poruka);
+        }
     }
 
     ajaxPoziv("meni.json",function(rezultat) {
         ispisMenia(rezultat);
     });
 
-    ajaxPoziv("input.json",function(rezultat){
-        ipsisForme(rezultat);
+    // ajaxPoziv("input.json",function(rezultat){
+    //     ipsisForme(rezultat);
+    // })
+    $("#forma").submit(function(e) {
+        e.preventDefault();
+        let ime = $('input[name="ime"]').val();
+        let prezime = $('input[name="prezime"]').val();
+        let email = $('input[name="email"]').val();
+        let uslov = $('input[name="uslov"]');
+        let nizGresaka = [];
+        ispitajVrednosti(regexIme,ime,"Ime mora poceti velikim slovom i mora imati najmanje 3 slova",nizGresaka);
+        ispitajVrednosti(regexPrezime,prezime,"Prezime mora poceti velikim slovom i mora imati najmanje 4 slova",nizGresaka)
+        ispitajVrednosti(regexMail,email,"Email nije unešen u pravilnom formatu",nizGresaka)
+        if (!uslov.checked) {
+            nizGresaka.push("Polje o uslovima mora biti čekirano")
+        }
+        let text = ""
+        nizGresaka.forEach(element => {
+            text += `<p class="text-danger">${element}</p>`
+        });
+        $("#greske").html(text)
     })
 }   
