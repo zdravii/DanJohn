@@ -291,45 +291,41 @@ window.onload = function() {
 
     })
 
-    $(document).on("change","#ddlFilterBoja",function () {
-        let idBoje = $("#ddlFilterBoja").val();
-        ajaxPoziv("proizvodi.json",function(rezultat) {
-            let proizvodi=rezultat;
-            let filtriraniProizvodi = [];
-            for (let proizvod of proizvodi) {
-                if(idBoje == proizvod.idBoje){
-                    filtriraniProizvodi.push(proizvod);
-                }
+    $('.ddlFilter').on("change",function () {
+        let idKategorije = parseInt($('#ddlFilterKategorija').val());
+        let idMaterijala = parseInt($('#ddlFilterMaterijal').val());
+        let idBoje = parseInt($('#ddlFilterBoja').val());
+        // console.log(idKategorije);
+        // console.log(idMaterijala);
+        // console.log(idBoje);
+        ajaxPoziv("proizvodi.json",function(rezultat){
+            let proizvodi = rezultat;
+            let filtriraniProizvodi = proizvodi;
+            // console.log(filtriraniProizvodi);
+            if (idKategorije) {
+                filtriraniProizvodi = filtriraniProizvodi.filter(element => element.idKategorije == idKategorije)
+            }
+            if (idBoje) {
+                filtriraniProizvodi = filtriraniProizvodi.filter(element => element.idBoje == idBoje)
+            }
+            if (idMaterijala) {
+                filtriraniProizvodi = filtriraniProizvodi.filter(element => element.idMaterijala == idMaterijala)
             }
             ispisProizvoda(filtriraniProizvodi);
         })
-    })
-    
-    $(document).on("change","#ddlFilterKategorija",function() {
-        let idKategorije = $("#ddlFilterKategorija").val();
-        ajaxPoziv("proizvodi.json",function(rezultat) {
-            let proizvodi=rezultat;
-            let filtriraniProizvodi = [];
-            for (let proizvod of proizvodi) {
-                if(idKategorije == proizvod.idKategorije){
-                    filtriraniProizvodi.push(proizvod);
-                }
-            }
-            ispisProizvoda(filtriraniProizvodi);
-        })
-    })
-
-    $(document).on("change","#ddlFilterMaterijal",function() {
-        let idMaterijala = $("#ddlFilterMaterijal").val();
-        ajaxPoziv("proizvodi.json",function(rezultat) {
-            let proizvodi=rezultat;
-            let filtriraniProizvodi = [];
-            for (let proizvod of proizvodi) {
-                if(idMaterijala == proizvod.idMaterijala){
-                    filtriraniProizvodi.push(proizvod);
-                }
-            }
-            ispisProizvoda(filtriraniProizvodi);
-        })
+        // console.log(filtriraniProizvodi);
+         // for (let proizvod of proizvodi) {
+            //     if(idKategorije == proizvod.idKategorije){
+            //         filtriraniProizvodi.push(proizvod);
+            //     }
+            //     if(idMaterijala == proizvod.idMaterijala){
+            //         filtriraniProizvodi.push(proizvod);
+            //     }
+            //     if (idBoje == proizvod.idBoje) {
+            //         filtriraniProizvodi.push(proizvod);
+            //     }
+            // }
+            // ispisProizvoda(filtriraniProizvodi);
+        
     })
 }

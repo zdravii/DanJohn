@@ -18,7 +18,7 @@ function ajaxPoziv(nazivFajla,rezultat) {
 
     const regexMail = /^[a-z]((\.|-|)?[a-z0-9]){2,}@[a-z]((\.|-|)?[a-z0-9]+){2,}\.[a-z]{2,6}$/;
 
-    const regexBroj = /^\+381[0-9]{2}-[0-9]{3}-[0-9]{3}$/;
+    // const regexBroj = /^\+381[0-9]{2}-[0-9]{3}-[0-9]{3}$/;
 
 // REGEX
 
@@ -101,7 +101,7 @@ window.onload = function() {
                                             </select>
                                         </div>
                                         <div class="col-lg-1">
-                                            <p class="fs-5 text-center ms-4">${obradaCene(proizvod)}</p>
+                                            <p class="fs-5 text-center ms-4">${obradaCene(proizvod)},00 RSD</p>
                                         </div>
                                         <div class="col-lg-1">
                                             <button class="form-control ">Izbriši</button>
@@ -109,7 +109,7 @@ window.onload = function() {
                                     </div>`
             }
             $('#tekstDrzac').html(ispisDrzac);
-            console.log(ispisProizvoda);
+            // console.log(ispisProizvoda);
             $('#proizvodi').html(ispisProizvoda)
         })
     }
@@ -138,13 +138,18 @@ window.onload = function() {
             }
         }
         ispis+=`<label for="isporuka" class="mt-1 ms-1">Isporuka : </label>`;
-        for (const input of inputi) {
+        for (let input of inputi) {
             if (input.type == "radio") {
                 ispis+=` ${input.dodatno}<input class="ms-2 me-2" type="${input.type}" name="${input.name}" id="${input.dodatno}">`
             }
         }
-        ispis+=`<input type="button" value="Potvrdi" id="submit" class="form-control mt-2 border border-5">`
+        ispis+='<input type="button" value="Potvrdi" id="submit" class="form-control mt-2 border border-5 submit">'
         document.getElementById("forma").innerHTML=ispis;
+        $(".submit").click(function() {
+            ispitajVrednosti(regexIme,"ime");
+            ispitajVrednosti(regexPrezime,"prezime")
+            ispitajVrednosti(regexMail,"email")
+        })
     }
 
     function uzmiItemIzLocalStorage(item) {
@@ -152,43 +157,14 @@ window.onload = function() {
     }
 
     function ispitajVrednosti(regex,input) {
-        var nizGresaka = [];
-        var brojGresaka = 0;
-        var input = document.getElementById(`${input}`);
-        if(!regex.test(input.value)){
-            if(input == 'ime'){
-                nizGresaka.push("Ime nije unešeno u ispravnom formatu!");
-                brojGresaka++;
-            }
-            if (input == 'prezime') {
-                nizGresaka.push("Prezime nije unešeno u ispravnom formatu!");
-                brojGresaka++;
-            }
-            if (input == 'email') {
-                nizGresaka.push("Email nije unešen u ispravnom formatu!");
-                brojGresaka++;
-            }
-            if (input == 'adresa') {
-                nizGresaka.push("Adresa nije unešena u ispravnom formatu!");
-                brojGresaka++;
-            }
-        }
+        console.log(input);
     }
-
-    ajaxPoziv("input.json",function(rezultat){
-        ipsisForme(rezultat);
-    })
 
     ajaxPoziv("meni.json",function(rezultat) {
         ispisMenia(rezultat);
     });
 
-    $('#submit').click(function() {
-        ispitajVrednosti(regexIme,ime);
-        ispitajVrednosti(regexPrezime,prezime);
-        ispitajVrednosti(regexMail,email);
-        ispitajVrednosti(regexBroj,broj);
-       console.log(brojGresaka);
+    ajaxPoziv("input.json",function(rezultat){
+        ipsisForme(rezultat);
     })
-
-}
+}   
